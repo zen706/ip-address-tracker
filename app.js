@@ -13,7 +13,7 @@ const result = document.querySelector('.result')
 let map
 
 $.getJSON('//api.ipify.org?format=jsonp&callback=?', function (data) {
-  const API = `http://ip-api.com/json/${data.ip}`
+  const API = `//ip-api.com/json/${data.ip}`
   log(API)
 
   fetchData(API)
