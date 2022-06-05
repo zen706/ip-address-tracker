@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Overpass:wght@400;700&family=Red+Hat+Text:wght@400;700&family=Roboto:wght@100;400;700;900&family=Rubik:wght@400;500;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <title>Frontend Mentor | IP Address Tracker</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="header">
+        <h1>IP Address Tracker</h1>
+        <p class="alert"></p>
+        <form class="search">
+          <input
+            type="search"
+            placeholder="Search for any IP address or domain"
+            class=""
+          />
+          <button type="submit" class="btn submit-btn">
+            <img src="./images/icon-arrow.svg" alt="icon-arrow" />
+          </button>
+        </form>
+        <div class="result">
+          <div class="part">
+            <div class="key">ip address</div>
+            <div class="value ip-address"></div>
+          </div>
+          <div class="part">
+            <div class="key">location</div>
+            <div class="value location"></div>
+          </div>
+          <div class="part">
+            <div class="key">timezone</div>
+            <div class="value timezone"></div>
+          </div>
+          <div class="part">
+            <div class="key">isp</div>
+            <div class="value isp"></div>
+          </div>
+        </div>
+      </div>      
+      <div id="map">
+        <div class="loader"></div>
+      </div>
+    </section>
+    <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/IsTaro">Shotaro</a>.
+  </footer>
+  </body>
+  <script src="./app.js"></script>
+</html>
